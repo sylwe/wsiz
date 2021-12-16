@@ -1,0 +1,2 @@
+# wsiz
+projekt zespołowy
