@@ -80,5 +80,5 @@ Cropped_img_loc = 'Cropped_img/7.png'
 cv2.imshow("Cropped Image ", cv2.imread(Cropped_img_loc))
 
 #Use tesseract to covert image into string
-#text = pytesseract.image_to_string(Cropped_img_loc, lang='eng' config='--psm 6')
-#print("Number is :", text)
+text = pytesseract.image_to_string(Cropped_img_loc, lang='eng' config='--psm 6')
+print("Number is :", text)
