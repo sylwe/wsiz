@@ -72,13 +72,13 @@ for c in cnts:
             break
 
 # Drawing the selected contour on the original image print(NumberPlateCnt)
-cv2.drawContours(image, [NumberPlateCnt], -1, (0,255,0), 3)
-cv2.imshow("Final Image With Number Plate Detected", image)
+cv2.drawContours(img, [NumberPlateCnt], -1, (0,255,0), 3)
+cv2.imshow("Final Image With Number Plate Detected", img)
 cv2.waitKey(0)
 
 Cropped_img_loc = 'Cropped_img/7.png'
 cv2.imshow("Cropped Image ", cv2.imread(Cropped_img_loc))
 
 #Use tesseract to covert image into string
-text = pytesseract.image_to_string(Cropped_img_loc, lang='eng' config='--psm 6')
+text = pytesseract.image_to_string(Cropped_img_loc, lang='eng', config='--psm 6')
 print("Number is :", text)
