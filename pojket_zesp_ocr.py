@@ -1,19 +1,18 @@
-#We must import libray 
-import numpy as np
+# We must import libray
 import cv2
 import imutils
 import pytesseract
 
-#The next steps is load file from directory:
+# The next steps is load file from directory:
 img = cv2.imread('lpd/plate.jpg')
 
-#now we must change width:
+# now we must change width:
 img = imutils.resize(img, width=550)
 
-#Now display the riginal image:
+# Now display the riginal image:
 cv2.imshow("original img", img)
 
-#and waiting for the user to press a key
+# and waiting for the user to press a key
 cv2.waitKey(0)
 
 
